@@ -80,10 +80,13 @@ namespace Week3_Day2_Lists
             animals.Add("walrus");
             animals.Add("platypus");
             animals.Add("shark");
-            foreach(string animal in animals)
+
+            foreach (string animal in animals)
             {
                 Console.WriteLine(animal);
             }
+            Console.WriteLine();
+            
             //List boolList = new List() { true,false, false, true, false};
             //Loop through each value
             //If the value is true print: "Better bring an umbrella"
@@ -94,13 +97,14 @@ namespace Week3_Day2_Lists
             {
                 if(boolList[i] == true)
                 {
-                    Console.WriteLine("Better bring and umbrella.");
+                    Console.WriteLine("Better bring an umbrella.");
                 }
                 else
                 {
                     Console.WriteLine("No rain today, enjoy the sun!");
                 }
             }
+            Console.WriteLine();
 
 
             //Create a list with the following numbers: 1, 23, 9, 77, 922, 6, 32, 63,14, 5
@@ -113,14 +117,119 @@ namespace Week3_Day2_Lists
             Console.WriteLine(numbers.Contains(77));
             Console.WriteLine(numbers.Contains(15));
 
+            Console.WriteLine();
+
             numbers.Remove(27);
             numbers.Remove(77);
             numbers.Remove(32);
             numbers.Remove(6);
+
             Console.WriteLine(numbers.Contains(23));
             Console.WriteLine(numbers.Contains(77));
             Console.WriteLine(numbers.Contains(15));
+            Console.WriteLine();
 
+
+            //HOMEWORK
+            //Come up with an example for how to use each of the methods / properties listed in the Common Properties & Methods section.
+            //Count
+            //Clear
+            //Add
+            //Remove
+            //Sort
+            //IndexOf
+            //Contains
+            //RemoveAt
+            //Insert
+
+            List<string> nhlTeams = new List<string>() { "Canadiens", "Maple Leafs", "Bruins", "Rangers", "Red Wings", "Blackhawks" };
+
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("The number of teams on this list is " + nhlTeams.Count + ".");
+            Console.WriteLine();
+
+            Console.WriteLine("Clear this list.");
+            nhlTeams.Clear();
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Add some teams to the list.");
+            nhlTeams.Add("Blue Jackets");
+            nhlTeams.Add("Penguins");
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Remove a team from the list.");
+            nhlTeams.Remove("Penguins");
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Add more teams to the list, and then sort the list.");
+            nhlTeams.Add("Senators");
+            nhlTeams.Add("Ducks");
+            nhlTeams.Add("Devils");
+            nhlTeams.Add("Hurricanes");
+            nhlTeams.Add("Lightning");
+            nhlTeams.Add("Canucks");
+            nhlTeams.Sort();
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("The index of the Lightning is " + nhlTeams.IndexOf("Lightning") + ".");
+            Console.WriteLine();
+
+            Console.WriteLine("See if the Stars are on this list.");
+            Console.WriteLine(nhlTeams.Contains("Stars"));
+            Console.WriteLine();
+
+            Console.WriteLine("Remove the team at the fourth index.");
+            nhlTeams.RemoveAt(4);
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Insert the Avalanche at the beginning of the list.");
+            nhlTeams.Insert(0, "Avalanche");
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Insert the Capitals in the fourth position.");
+            nhlTeams.Insert(3, "Capitals");
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Finally, insert the Wild at the end of the list.");
+            nhlTeams.Insert(nhlTeams.Count, "Wild");
+            foreach (string team in nhlTeams)
+            {
+                Console.WriteLine(team);
+            }
+            Console.WriteLine();
 
         }
     }
